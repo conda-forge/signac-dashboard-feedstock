@@ -1,19 +1,17 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "bb4214e7f2be4185f7e0e1550f544b2b44f6ad04e426fedec754cf8fc9dae0a3" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://bitbucket.org/glotzer/signac-dashboard/get/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_rev: v{{ version }}
+  git_url: https://bitbucket.org/glotzer/signac-dashboard.git
 
 build:
   number: 0
   skip: True  # [py<34]
-  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
@@ -34,6 +32,10 @@ requirements:
 test:
   imports:
     - signac_dashboard
+  source_files:
+    - signac_dashboard/**
+    - test.sh
+    - tests/**
 
 about:
   home: https://bitbucket.org/glotzer/signac-dashboard
