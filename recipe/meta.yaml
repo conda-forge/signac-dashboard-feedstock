@@ -1,5 +1,5 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,6 @@ requirements:
     - flask
     - flask-assets
     - webassets >=0.12.1
-    - flask-cache
     - flask-turbolinks
     - libsass
     - jsmin
@@ -47,7 +46,7 @@ about:
     Data visualization, analysis, and "dashboard" monitoring tool
     as part of the signac framework. The signac-dashboard interface
     allows users to rapidly view data managed in a signac project.
-  doc_url: https://bitbucket.org/glotzer/signac-dashboard/overview
+  doc_url: https://signac-dashboard.readthedocs.io/en/latest
   dev_url: https://bitbucket.org/glotzer/signac-dashboard/src
 
 extra:
