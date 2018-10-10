@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.1.5" %}
-{% set sha256 = "b5305e82f4ea16f36799573677bd384e542c75a12d43902cb518519b3a566233" %}
+{% set version = "0.1.6" %}
+{% set sha256 = "fe90ceda94e9092b5f04c37d9db78164a97a51a7b7e230e0e7153bb0fc575e0c" %}
 
 package:
   name: {{ name|lower }}
@@ -29,7 +29,6 @@ requirements:
     - flask-turbolinks
     - libsass
     - jsmin
-    - cssmin
 
 test:
   imports:
