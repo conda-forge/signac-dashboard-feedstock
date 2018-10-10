@@ -20,6 +20,8 @@ requirements:
   build:
     - python
     - setuptools
+  host:
+    - pip
   run:
     - python
     - signac >=0.8
