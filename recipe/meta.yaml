@@ -1,40 +1,39 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.6" %}
+{% set sha256 = "fe90ceda94e9092b5f04c37d9db78164a97a51a7b7e230e0e7153bb0fc575e0c" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  git_rev: v{{ version }}
-  git_url: https://bitbucket.org/glotzer/signac-dashboard.git
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://glotzerlab.engin.umich.edu/Downloads/{{ name }}/{{ name }}-v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
+  script: "{{ PYTHON }} -m pip install . --ignore-installed --no-cache-dir -vvv"
   skip: True  # [py<34]
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
+    - pip
   run:
     - python
     - signac >=0.8
-    - flask
+    - flask >=0.12
     - flask-assets
     - webassets >=0.12.1
     - flask-turbolinks
     - libsass
     - jsmin
-    - cssmin
 
 test:
   imports:
     - signac_dashboard
-  source_files:
-    - signac_dashboard/**
-    - test.sh
-    - tests/**
 
 about:
   home: https://bitbucket.org/glotzer/signac-dashboard
@@ -46,8 +45,8 @@ about:
     Data visualization, analysis, and "dashboard" monitoring tool
     as part of the signac framework. The signac-dashboard interface
     allows users to rapidly view data managed in a signac project.
-  doc_url: https://signac-dashboard.readthedocs.io/en/latest
-  dev_url: https://bitbucket.org/glotzer/signac-dashboard/src
+  doc_url: https://{{ name }}.readthedocs.io/en/latest
+  dev_url: https://bitbucket.org/glotzer/{{ name }}
 
 extra:
   recipe-maintainers:
