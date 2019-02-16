@@ -12,17 +12,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  noarch: python
+  number: 1001
   script: "{{ PYTHON }} -m pip install . --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [py<34]
 
 requirements:
   host:
-    - python
+    - python >=3.4
     - setuptools
     - pip
   run:
-    - python
+    - python >=3.4
     - signac >=0.8
     - flask >=0.12
     - flask-assets
@@ -36,7 +36,7 @@ test:
     - signac_dashboard
 
 about:
-  home: https://bitbucket.org/glotzer/signac-dashboard
+  home: https://signac.io
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
@@ -45,8 +45,8 @@ about:
     Data visualization, analysis, and "dashboard" monitoring tool
     as part of the signac framework. The signac-dashboard interface
     allows users to rapidly view data managed in a signac project.
-  doc_url: https://{{ name }}.readthedocs.io/en/latest
-  dev_url: https://bitbucket.org/glotzer/{{ name }}
+  doc_url: https://docs.signac.io
+  dev_url: https://github.com/glotzerlab/signac-dashboard
 
 extra:
   recipe-maintainers:
