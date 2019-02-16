@@ -21,7 +21,8 @@ allows users to rapidly view data managed in a signac project.
 Current build status
 ====================
 
-All platforms: ![noarch disabled](https://img.shields.io/badge/noarch-disabled-lightgrey.svg)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/signac-dashboard-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/signac-dashboard-feedstock)
 
 Current release info
 ====================
