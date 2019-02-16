@@ -15,15 +15,14 @@ build:
   noarch: python
   number: 1001
   script: "{{ PYTHON }} -m pip install . --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [py<34]
 
 requirements:
   host:
-    - python
+    - python >=3.4
     - setuptools
     - pip
   run:
-    - python
+    - python >=3.4
     - signac >=0.8
     - flask >=0.12
     - flask-assets
