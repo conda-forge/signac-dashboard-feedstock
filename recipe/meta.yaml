@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.1.6" %}
-{% set sha256 = "fe90ceda94e9092b5f04c37d9db78164a97a51a7b7e230e0e7153bb0fc575e0c" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "3b3c72202555f963a26ea29f5a92c28a620120b3c0d20ff90ab1f37c3f70fe7a" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1001
+  number: 0
   script: "{{ PYTHON }} -m pip install . --ignore-installed --no-cache-dir -vvv"
 
 requirements:
@@ -30,6 +30,7 @@ requirements:
     - flask-turbolinks
     - libsass
     - jsmin
+    - natsort
 
 test:
   imports:
@@ -40,11 +41,11 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Search and browse through signac data spaces in the browser.'
+  summary: 'signac-dashboard: data visualization for signac'
   description: |
-    Data visualization, analysis, and "dashboard" monitoring tool
-    as part of the signac framework. The signac-dashboard interface
-    allows users to rapidly view data managed in a signac project.
+    Built on top of the signac framework, signac-dashboard allows
+    users to rapidly visualize and analyze data managed in a signac
+    project.
   doc_url: https://docs.signac.io
   dev_url: https://github.com/glotzerlab/signac-dashboard
 

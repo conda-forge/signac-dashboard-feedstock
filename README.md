@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About signac-dashboard
 ======================
 
@@ -11,18 +7,27 @@ Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Search and browse through signac data spaces in the browser.
+Summary: signac-dashboard: data visualization for signac
 
-Data visualization, analysis, and "dashboard" monitoring tool
-as part of the signac framework. The signac-dashboard interface
-allows users to rapidly view data managed in a signac project.
+Built on top of the signac framework, signac-dashboard allows
+users to rapidly visualize and analyze data managed in a signac
+project.
 
 
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/signac-dashboard-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/signac-dashboard-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1908&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/signac-dashboard-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
