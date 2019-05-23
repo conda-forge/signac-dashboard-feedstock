@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "e9a8982d770a38d2b3ec4da4dfa483a1e8303b7a6b211f82c2a94b5cec4373b1" %}
+{% set version = "0.2.4" %}
+{% set sha256 = "685dc578b563c5636d50e1c477b69a5914f719bb4c5e90f6d4031cdedf51d37d" %}
 
 package:
   name: {{ name|lower }}
