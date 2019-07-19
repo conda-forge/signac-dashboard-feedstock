@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.2.4" %}
-{% set sha256 = "685dc578b563c5636d50e1c477b69a5914f719bb4c5e90f6d4031cdedf51d37d" %}
+{% set version = "0.2.5" %}
+{% set sha256 = "751e73e89cb8eb686a22619b436bf8c6ca10f53a3e03d305fb0382240f4a60ff" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -22,15 +22,16 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >=3.4
-    - signac >=0.8
     - flask >=0.12
     - flask-assets
-    - webassets >=0.12.1
     - flask-turbolinks
-    - libsass
     - jsmin
+    - libsass
     - natsort
+    - python >=3.4
+    - signac >=0.8
+    - watchdog
+    - webassets >=0.12.1
 
 test:
   imports:
