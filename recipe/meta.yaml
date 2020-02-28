@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
 {% set version = "0.2.7" %}
-{% set sha256 = "5138792633b43ffb40b5dc133a3a45e97cbc8059245501cea909ec1f26db5b56" %}
+{% set sha256 = "df5dac1216f96928be78cbd8db8e7b0f4b4e186a5902090357272bf78e3ee1b2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/s/signac-dashboard/signac-dashboard-{{ version }}.tar.gz
+  url: https://glotzerlab.engin.umich.edu/Downloads/{{ name }}/{{ name }}-v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
