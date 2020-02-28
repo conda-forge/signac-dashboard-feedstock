@@ -28,6 +28,7 @@ requirements:
     - jsmin
     - libsass
     - natsort
+    - python >=3.5
     - signac >=1.0
     - watchdog
     - webassets >=2.0
