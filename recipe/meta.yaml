@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.2.7" %}
-{% set sha256 = "df5dac1216f96928be78cbd8db8e7b0f4b4e186a5902090357272bf78e3ee1b2" %}
+{% set version = "0.2.8" %}
+{% set sha256 = "0846cbb69b5686bf38c5ca84ebecffb737c7dac8acedfea238c8d05dda21562f" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
