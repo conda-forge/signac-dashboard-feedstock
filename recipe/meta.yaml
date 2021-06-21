@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - setuptools
     - pip
   run:
@@ -28,7 +28,7 @@ requirements:
     - jsmin
     - libsass
     - natsort
-    - python >=3.5
+    - python >=3.6
     - signac >=1.0
     - watchdog
     - webassets >=2.0
