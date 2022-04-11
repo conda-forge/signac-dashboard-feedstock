@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.2.9" %}
-{% set sha256 = "85c2bd3ea9be76ef6c9ef725160d10e6d2c720eb5d4484e5af26d079e9cc741b" %}
+{% set version = "0.2.10" %}
+{% set sha256 = "bbbafd020b4d685874d3d00608733a6ae215f98fd63fab104e0984ed5dbacb9d" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://glotzerlab.engin.umich.edu/Downloads/{{ name }}/{{ name }}-v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/s/signac-dashboard/signac-dashboard-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -18,21 +18,23 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - setuptools
     - pip
   run:
-    - flask >=1.0
-    - flask-assets >=2.0
+    - flask >=1.0.0
+    - flask-assets >=2.0.0
     - flask-turbolinks
+    - jinja2 >=3.0.0
     - jsmin
     - libsass
+    - markupsafe >=2.0.0
     - natsort
-    - python >=3.6
-    - signac >=1.0
+    - python >=3.8
+    - signac >=1.0.0
     - watchdog
-    - webassets >=2.0
-    - werkzeug >=1.0
+    - webassets >=2.0.0
+    - werkzeug >=1.0.0
 
 test:
   imports:
