@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.2.10" %}
-{% set sha256 = "bbbafd020b4d685874d3d00608733a6ae215f98fd63fab104e0984ed5dbacb9d" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "a0dae10a1584c562670f58d95041c7c473ddf2129486372350ceef236324fe33" %}
 
 package:
   name: {{ name|lower }}
@@ -57,3 +57,4 @@ extra:
   recipe-maintainers:
     - csadorf
     - bdice
+    - cbkerr
