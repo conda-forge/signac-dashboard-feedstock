@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.3.1" %}
-{% set sha256 = "65fb962cb271e3290cb455ff625f32682454a90ba09fd59e39595657f81b2b85" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "5450963eca90677fa01a32ccef0767029b47f8fe1831b24ee16968a4b2d0abe3" %}
 
 package:
   name: {{ name|lower }}
@@ -24,6 +24,7 @@ requirements:
   run:
     - flask >=2.1.0
     - flask-assets >=2.0.0
+    - flask-login >=0.6.0
     - flask-turbolinks
     - jinja2 >=3.0.0
     - jsmin
@@ -31,7 +32,7 @@ requirements:
     - markupsafe >=2.0.0
     - natsort
     - python >=3.8
-    - signac >=1.0.0
+    - signac >=1.8.0
     - watchdog
     - webassets >=2.0.0
     - werkzeug >=2.1.0
