@@ -1,11 +1,11 @@
-About signac-dashboard
-======================
+About signac-dashboard-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/signac-dashboard-feedstock/blob/main/LICENSE.txt)
 
 Home: https://signac.io
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/signac-dashboard-feedstock/blob/main/LICENSE.txt)
 
 Summary: signac-dashboard: data visualization for signac
 
