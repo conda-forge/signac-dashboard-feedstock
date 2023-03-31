@@ -32,7 +32,7 @@ requirements:
     - markupsafe >=2.0.0
     - natsort
     - python >=3.8
-    - signac >=1.8.0
+    - signac >=2.0.0
     - watchdog
     - webassets >=2.0.0
     - werkzeug >=2.1.0
