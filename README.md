@@ -155,4 +155,5 @@ Feedstock Maintainers
 * [@bdice](https://github.com/bdice/)
 * [@cbkerr](https://github.com/cbkerr/)
 * [@csadorf](https://github.com/csadorf/)
+* [@joaander](https://github.com/joaander/)
 
