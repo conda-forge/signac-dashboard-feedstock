@@ -8,17 +8,17 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/s/signac-dashboard/signac-dashboard-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/signac-dashboard/signac-dashboard-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
@@ -31,13 +31,15 @@ requirements:
     - libsass
     - markupsafe >=2.0.0
     - natsort
-    - python >=3.8
+    - python >={{ python_min }}
     - signac >=2.0.0
     - watchdog
     - webassets >=2.0.0
     - werkzeug >=2.1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - signac_dashboard
 
