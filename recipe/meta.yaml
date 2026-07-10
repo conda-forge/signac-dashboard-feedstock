@@ -1,6 +1,6 @@
 {% set name = "signac-dashboard" %}
-{% set version = "0.6.1" %}
-{% set sha256 = "ea0f9f3e3016ea4d247f33575ae5c98b87d08e4503f2c239a4f10ab7a888482e" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "aba3c27c0d8567a409dfb6441e92c47ee528dc1b9f07d797d9b28667ecade706" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/s/signac-dashboard/signac-dashboard-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/signac-dashboard/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
